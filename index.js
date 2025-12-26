@@ -22,7 +22,9 @@ app.use(
 
 app.use('/user', userRoute); 
 
-app.use('/api/users', friendRoute);
+app.use('/api/users', userRoute);
+
+app.use('/api/friends', friendRoute);
 
 app.listen(port, () => {
   console.log(`Server running on port ${port}`);

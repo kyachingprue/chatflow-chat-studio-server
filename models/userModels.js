@@ -45,6 +45,16 @@ const userSchema = new mongoose.Schema(
       default:
         'https://i.ibb.co.com/gbVvwDHp/360-F-724597608-pmo5-Bs-Vum-Fc-Fy-HJKl-ASG2-Y2-Kpkkfi-YUU.jpg',
     },
+    friends: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: 'Users',
+      default: [],
+    },
+    friendRequests: {
+      type: [mongoose.Schema.Types.ObjectId],
+      ref: 'Users',
+      default: [],
+    },
   },
   { timestamps: true }
 );
